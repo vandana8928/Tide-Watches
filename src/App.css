@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: rgba(132, 3, 3, 0.16) 0px 1px 4px,
+    rgb(178, 24, 24) 0px 0px 0px 3px;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+.links ul {
+  display: flex;
+  justify-content: space-evenly;
+
+  align-items: center;
+  list-style: none;
+}
+.links li {
+  padding: 0 2vw;
+  font-size: 1.5vw;
+  transition: all ease 0.5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.links li:hover {
+  color: rgb(128, 7, 7);
+  transition: all ease 0.3s;
+}
+button {
+  background-color: rgb(163, 8, 8);
+  color: white;
+  font-size: 25px;
+  padding: 6px;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 4px;
+  width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button:hover {
+  background-color: black;
+}
+.hero {
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: black;
+  overflow: hidden;
+}
+.hero-content {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-content .btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0.5vw ;
+}
+.btn .First-btn {
+  background-color: rgb(163, 8, 8);
+  width: auto;
+  height: auto;
+}
+.btn .Second-btn {
+  background-color: rgb(176, 164, 164);
+  width: auto;
+  height: auto;
+}
+.hero-content h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 35px;
+  padding: 10px;
+}
+span {
+  color: rgb(172, 4, 4);
+}
+.hero-content p {
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.brand-icons img {
+  height: 50px;
+  width: 50px;
+}
+.hero-image {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.hero-image img {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    height:auto;
+  }
+  .hero-content {
+    width: 100%;
+  }
+  .hero-image {
+    width: 100%;
+  }
+  .links li {
+    padding: 0 2vw;
+    font-size: 6px;
+    transition: all ease 0.5s;
   }
 }
+.product {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  align-content: center;
+}
+.product h1 {
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 20%); /* Four equal columns */
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+.sub-card {
+  height: auto;
+  background-color: black;
+}
+.sub-card .images {
+  width: 100%;
+  height: 170px;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sub-card .images img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.sub-card:hover {
+  transform: scale(1.1); /* For example, increase the size on hover */
+}
+
+.sub-card .content {
+  padding: 2vw 0;
+}
+.sub-card .price {
+  display: flex;
+  gap: 20px;
+  padding: 0.5vw 1vw;
+}
+.price p {
+  color: green;
+}
+del {
+  color: white;
+}
+.sub-card .heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0.5vw 1vw;
+}
+.sub-card .heading h5 {
+  color: white;
+}
+.sub-card .description {
+  padding: 0.5vw 1vw;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .product {
+    height: auto;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr; /* One column */
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .sub-card {
+    width: 80%;
+    margin: 0 10vw;
+  }
+}
+.footer {
+  width: 100%;
+  background-color: black;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.footer h3 {
   color: white;
+  text-align: center;
+}
+.footer h4 {
+  padding: 1vw;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
 }
 
-.App-link {
-  color: #61dafb;
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-media-icons li a {
+  font-size: 80px;
 }
